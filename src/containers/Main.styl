@@ -1,0 +1,253 @@
+$title()
+  font-size 17px
+  height 20px
+  line-height 20px
+  margin 10px 0
+  padding-left 9px
+  border-left 2px solid #d33a31
+$img(val)
+  width val
+  vertical-align middle
+  object-fit fill
+$text()
+  text-overflow ellipsis
+  white-space nowrap
+  word-break normal
+  overflow hidden
+
+.App
+  .header
+    .log-bar
+      padding 0 8px
+      height 44px
+      font-weight bold
+      line-height 44px
+      background-color #31c27c
+      .icon-changpian
+        font-size 30px
+        color #F9CD17
+      .log-bar--title
+        margin-left 4px
+        font-size 20px
+        color #fff
+        vertical-align top
+  .footer
+    min-height 70px
+    text-align center
+    padding 15px 0
+  .rm-content
+    width 100%
+    background-color #fff
+    .rmsl
+      .rmsl--title
+        $title()
+      .rmsl--list
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        .rmsl--item
+          position relative
+          flex 0 0 33%
+          a
+            img
+              $img(100%)
+            p
+              padding 6px 2px
+              line-height 1.2
+              font-size 13px
+            span 
+              position absolute
+              top 2px
+              right 5px
+              font-size 12px
+              color #fff
+              z-index 2
+              text-shadow 1px 0 0 rgba(0,0,0,.15)
+            &:after
+              content " "
+              position absolute
+              left 0
+              top 0
+              width 100%
+              height 20px
+              z-index 3
+              background-image linear-gradient(180deg,rgba(0,0,0,.2),transparent)
+    .rmns
+      .rmns--title
+        $title()
+
+.player
+  position relative
+  .player-header
+    position absolute
+    top 20px
+    right 0
+    left 0
+    height 40px
+    line-height 40px
+    padding 0 10px
+    z-index 18
+    .icon-back
+      font-size 40px
+      color #fff
+      text-shadow 1px 1px #444
+  .player-content
+    display flex
+    flex-direction column
+    height 100vh
+    text-align center
+    .player-content_cover
+      width 100%
+      padding-top 100%
+      background-size cover
+    .player-content_text
+      line-height 1.5
+      padding 30px 0 20px 0
+      flex 1
+      h2
+        font-size 30px
+      h6
+        color #888
+    .player-content_controls
+      padding 20px 0 40px 0
+      display flex
+      justify-content space-around
+      .iconfont
+        font-size 36px
+    .player-content_lyrics
+      flex 0 0 120px
+      padding 0 10px
+      background rgb(236,236,243)
+      overflow hidden
+      .plc_lyrics-wrapper
+        transition transform .3s ease
+        transform-origin 0 0
+        p
+          height 40px
+          line-height 40px
+          color #888
+    .player-content_slider
+      display flex
+      .startime, .endtime
+        flex 0 0 60px
+        text-align center
+
+.playlist-detail
+  overflow hidden
+  padding-bottom 60px
+  .playlist-detail-wrapper
+    .pld-head
+      position relative
+      padding 40px 10px 30px 15px
+      .icon-back
+        font-size 40px
+        color #fff
+        text-shadow 1px 0 #555
+        position absolute
+        top 0
+        left 0
+        z-index 2
+      .pld-head_bg
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 1
+        filter blur(20px)
+        background-size cover
+        background-position 50%
+      .pld-head_wrap
+        position relative
+        z-index 2
+        display flex
+        .pld-head_cover
+          flex 0 0 145px
+          height 145px
+          img
+            $img(100%)
+        .pld-head_info
+          margin-left 16px
+          flex 1 1 0
+          h2
+            font-size 17px
+            color #fefefe
+            height 44px
+            line-height 44px
+            $text()
+          .pld-head_info_creator
+            margin-top 20px
+            color #fefefe
+            $text()
+            img
+              height 30px
+              $img(30px)
+              border-radius 50%
+              margin-right 10px
+    .pld-intro
+      padding 10px 10px
+      color #666
+      li
+        margin-bottom 16px
+        em
+          margin-right 10px
+          padding 1px 8px
+          font-size 12px
+          background-color #ddd
+          border-radius 20%
+    .pld-songlist
+      .pld-songlist_title
+        padding-left 10px
+        height 26px
+        line-height 26px
+        background-color #e1e1e1
+
+.rmns--list
+  line-height 1.5
+  color #222
+  .rmns--item
+    display flex
+    padding 4px 10px
+    .rmns--item_cover
+      flex 0 0 45px
+      display flex
+      align-items center
+      justify-content center
+      margin-right 10px
+      text-align center
+      img
+        $img(100%)
+      span
+        line-height 100%
+        font-size 18px
+        font-weight 700
+        color #777
+    .rmns--item_text
+      width 0
+      flex 1 1
+      h2, h6
+        $text()
+      h2
+        font-size 17px
+      h6
+        font-size 12px
+        color #888
+    .rmns--item_icon
+      flex 0 0 60px
+      text-align center
+      .icon-play2
+        font-size 22px
+        color #c4c4c4
+
+.mask
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index 19
+  background #000
+  display none 
+  opacity .4
+  &.mask-open
+    display block

@@ -1,0 +1,37 @@
+@import '/css/reset.css';
+
+body {
+  font-size: 14px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  font-family: '微软雅黑', 'Courier New', Courier, monospace;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter .fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave .fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

@@ -1,0 +1,14 @@
+.swipeable-view
+  min-height calc(100vh - 192px)
+  background-color #fff
+  overflow-x hidden
+  .swipeable-view-wrapper
+    display flex
+    direction ltr
+    flex-direction row
+    transition all 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s
+    &>div
+      width 100%
+      flex-shrink 0
+      overflow-y hidden
+  
